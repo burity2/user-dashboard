@@ -1,0 +1,165 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Grid Layout
+*/
+
+#container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#header {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  background-color: #ffffff;
+  grid-column: 2 / span 2;
+}
+
+.header-icon {
+  filter: brightness(0) saturate(100%) invert(24%) sepia(5%) saturate(0%) hue-rotate(93deg) brightness(100%) contrast(93%);
+  height: 1.5rem;
+  justify-self: center;
+}
+
+#search-bar-input{
+  border-radius: 15%;
+  background-color: black;
+}
+
+#search-bar{
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  align-self: center;
+  padding: 2%;
+}
+
+#l-sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: max-content;
+  color: #ffffff;
+  background-color: #1992d4;
+  grid-row: 1 / -4;
+  grid-column: 1 / 2;
+  font-size: 1.1rem;
+  font-weight: bold;
+  row-gap:12%;
+  align-content: start;
+}
+
+.l-sidebar-icon {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(71deg) brightness(95%) contrast(106%);
+  height: 1.5rem;
+  justify-self: center;
+}
+
+#dashboard {
+  display: grid;
+  justify-items: left;
+  align-items: center;
+  grid-template-columns: 1fr 4fr;
+  margin-top: 8%;
+  margin-left: 5%;
+  margin-bottom: -19%;
+}
+
+#dashboard-icon {
+  justify-self: center;
+  height: 90%;
+}
+
+#dashboard-title {
+  font-size: 1.8rem;
+}
+
+#main-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 6%;
+}
+
+.main-menu-item{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.main-menu-p{
+  width: 16ch;
+  text-align: left;
+}
+
+#options-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10%;
+}
+
+.options-menu-p{
+  width: 16ch;
+  text-align: left;
+}
+
+#projects {
+  display: grid;
+  background-color: #e2e8f0;   
+}
+
+#r-sidebar {
+  display: grid;
+  background-color: #e2e8f0;
+}
